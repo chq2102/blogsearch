@@ -1,0 +1,143 @@
+@CHARSET "UTF-8";
+
+body {
+	position: relative;
+	margin: 0px;
+}
+
+
+.index{
+	padding-top: 60px;
+}
+
+#logo {
+	text-align: center;
+}
+
+
+
+#search {
+	text-align: center;
+	padding-left: 60px;
+}
+
+.clhead {
+	background-color: #f1f1f1;
+	background-image: -webkit-gradient(radial, 100 36, 0, 100 -40, 120, from(#fafafa),
+		to(#f1f1f1) );
+	border-bottom: 1px solid #666;
+	border-color: #e5e5e5;
+	height: 60px;
+}
+
+#resultsearch {
+	position:absolute ;
+	padding-top: 15px;
+	padding-left: 98px;
+}
+
+.resultlogo{
+	position:absolute ;
+	padding-top: 15px;
+	width: 90px ;	
+	padding-left: 8px;
+}
+
+#main {
+	position: relative;
+	z-index: 0;
+	padding-left: 104px;
+}
+
+.main {
+	width: 675px;
+	min-height: 20px;
+	min-height: 500px;
+	_height: 500px;
+	margin:0px;
+	margin-bottom: 25px;
+}
+
+.rsabout{
+	font-size: 14px;
+	color: #808080 ;
+	padding-top: 8px;
+	margin-bottom: 8px;
+}
+
+#doctitle {
+	padding-top: 10px;
+}
+
+.pt {
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 26px;
+}
+
+.tclick {
+	text-decoration: none;
+}
+
+#doccontent {
+	padding-top: 5px;
+	margin-bottom: 20px;
+	font-family: '微软雅黑';
+	font-size: 14px;
+	color: #656
+}
+
+.ft {
+	line-height: 20px;
+}
+
+.click {
+	text-decoration: none;
+	color: #1a0dab;
+}
+
+click:hover {
+	color: #FFFF00;
+}
+
+.pc {
+	width: 34px;
+	height: 34px;
+	border: 1px solid #e1e2e3;
+	cursor: pointer;
+	
+}
+
+
+#resultfoot{
+	
+}
+.resultfoot{
+	background-color: #f1f1f1;
+	background-image: -webkit-gradient(radial, 100 36, 0, 100 -40, 120, from(#fafafa),
+		to(#f1f1f1) );
+	border-bottom: 1px solid #666;
+	border-color: #e5e5e5;
+	height: 50px;
+}
+
+#foot {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.muted {
+	color: #8f8f8f;
+}
+
+
+
+.kpbb {
+background-color: #4d90fe;
+height:30px;
+width: 60px;
+border: 1px solid #3079ed;
+color: #FFFFFF ;
+}
+
+
