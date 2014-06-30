@@ -9,9 +9,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class ParseHtmlToText {
-	//把需要查找的关键ID 放入一个数组
-	private static String idName[] = {"article_content","cnblogs_post_body",
-		"blog_content","sina_keyword_ad_area2"};
 	
 	//把解析后的内容输出到缓存中
 	public  StringBuffer ParserH(String htmlDrictoey) throws IOException
@@ -20,22 +17,20 @@ public class ParseHtmlToText {
 		Document doc = Jsoup.parse(input, "UTF-8");//用Jsoup解析文件生成docment
 		StringBuffer buffer = new StringBuffer();
 
-		Element blogContent = null;//要在文件中查找的元素
-		//按数组中的关键ID到文件中去查看是否有符合的元素
-		for(int i=0;i<idName.length;i++){
+		Element blogContent = null;//要在文件中查找的元素		
 
-			if(blogContent==null){
-				blogContent = doc.getElementById(idName[i]);//如果docment中有找到符合的元素，则提取给blogContent
-			}
-		}
-		//如果在文件中没有找到在数组中的关键ID 则去找特殊的class
-		if(blogContent==null)
-		{	
-			if(doc.getElementsByAttributeValue("class", "Blog_wz1").first()!=null)
-				blogContent = doc.getElementsByAttributeValue("class", "Blog_wz1").first();
-			else 
-				blogContent = doc.getElementsByAttributeValue("class", "postText").first();
-		}
+		//按数组中的关键ID到文件中去查看是否有符合的元素 如果在文件中没有找到在数组中的关键ID 则去找特殊的class
+		if(doc.getElementById("centercontent")!=null)
+			blogContent = doc.getElementById("centercontent");
+		
+		else if(doc.getElementById("cnblogs_post_body")!=null)
+			blogContent = doc.getElementById("cnblogs_post_body");
+		
+		else if(doc.getElementsByAttributeValue("class", "Blog_wz1").first()!=null)
+			blogContent = doc.getElementsByAttributeValue("class", "Blog_wz1").first();
+		
+		else 
+			blogContent = doc.getElementsByAttributeValue("class", "postText").first();
 		//blogContent不为空，即有找到元素
 		if(blogContent!=null){	
 			Elements tagDivs = blogContent.getElementsByTag("div");//获取整个DIV中的元素
